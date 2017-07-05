@@ -1,0 +1,75 @@
+article{
+    width: 80%;
+    /*border: 1px solid*/
+    box-shadow: 0 0 5px gray;
+    /*height: 30px;*/
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+header h1{
+    text-align: center;
+}
+header address{
+    text-align: center;
+    font-style: normal;
+}
+header strong {
+    font-weight: normal;
+    /*将元素设置为块级元素，那么这个元素就具备了块级元素的特征*/
+    /*独自占用一行*/
+    display: block;
+}
+header p{
+    margin: 5px 0;
+}
+header .zhaiYao::before{
+    content: "摘要：";
+    font-weight: bold;
+}
+header .key::before{
+    content: "关键词：";
+    font-weight: bold;
+}
+header .classNumber::before{
+    content: "中图分类号：";
+    font-weight: bold;
+}
+/*选中含有lang属性且lang属性值为en的header,在这个
+  header中找到类名为zhaiYao的元素，给这个元素添加前缀
+ */
+header[lang='en'] .zhaiYao::before{
+    content: 'Abstract:';
+}
+header[lang='en'] .key::before{
+    content: "KeyWord:";
+}
+header p{
+    /*文本两端对齐*/
+    text-align: justify;
+}
+main p{
+    text-indent: 2em;
+    margin: 6px 0;
+    text-align: justify;
+}
+sup{
+    color: blue;
+}
+figure{
+    text-align: center;
+    
+}
+figure img{
+    /*css 函数 用来计算运算*/
+    max-width: calc(100% - 40px);
+}
+
+footer h2 {
+   font-size: 20px;
+
+}
+footer ol{
+    list-style: none;
+    padding: 0;
+    margin-left: 30px;
+}
