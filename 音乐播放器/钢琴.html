@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>音乐播放琴</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            background-image: radial-gradient(grey, black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            width: 600px;
+            height: 300px;
+            background-image: url(keys.png);
+            /*背景图片宽高*/
+            background-size: 100% 100%;
+            border: solid 10px grey;
+            border-top-width: 20px;
+            border-bottom-width: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 0 5px white;
+            display: flex;
+            position: relative;
+        }
+        
+        .q {
+            height:30px;
+            width: 30px;
+            background-image: url(2.png);
+            background-repeat: no-repeat;
+            background-size: 30px 30px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        
+        div {
+            /*width: 11.11%;
+            height: 100%;
+            float: left;*/
+            /*所有的div标签按1：1：1的比例平分 前提是使副标签main弹性布局*/
+            flex-grow: 1;
+            /*border: solid 1px blue;*/
+            /*box-sizing: border-box;*/
+        }
+        
+        div:active, .down {
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), lightgrey);
+        }
+        /*.down{
+            定义一种类型，用来处理阴影效果
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),lightgrey);
+        }*/
+    </style>
+</head>
+
+<body>
+    <audio src="y1.mp3" loop></audio>
+    <audio src="y2.m4a" loop></audio>
+    <audio src="y3.m4a" loop></audio>
+    <audio src="y4.m4a" loop></audio>
+    <audio src="y5.m4a" loop></audio>
+    <audio src="y6.m4a" loop></audio>
+    <audio src="y7.m4a" loop></audio>
+    <audio src="y8.m4a" loop></audio>
+    <audio src="y9.m4a" loop></audio>
+    <main>
+        <div onmousedown="playSound(0)"></div>
+        <div onmousedown="playSound(1)"></div>
+        <div onmousedown="playSound(2)"></div>
+        <div onmousedown="playSound(3)"></div>
+        <div onmousedown="playSound(4)"></div>
+        <div onmousedown="playSound(5)"></div>
+        <div onmousedown="playSound(6)"></div>
+        <div onmousedown="playSound(7)"></div>
+        <div onmousedown="playSound(8)"></div>
+        <section class="q"></section>
+    </main>
+    <script src="piano.js"></script>
+</body>
+
+</html>
