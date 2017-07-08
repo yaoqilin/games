@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3D图展</title>
+    <script src="jquery.js"></script>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            background-image: radial-gradient(circle, grey, blue, yellow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            -moz-user-select: none;
+        }
+        
+        main {
+            height: 300px;
+            width: 300px;
+            /*color: black;*/
+            /*background-repeat: no-repeat;
+            background-size: contain;*/
+            position: relative;
+            /*animation: run 10s infinite linear;*/
+            /*animation-delay: 5s;
+            animation: active 10s infinite linear;*/
+            transform-style: preserve-3d;
+             animation-fill-mode: forwards;
+        }
+        
+        .activeup {
+           animation: up 1s  linear;
+        }
+        
+        .activedown {
+            animation: down 1s  linear;
+        }
+        
+        div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 5px gold;
+            /*animation: move 1s infinite linear;*/
+           
+        }
+        
+        .a {
+            /*background-image: url(1.jpg);*/
+            transform: translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+            /*box-shadow:  0 0 5px red;*/
+        }
+        
+        .b {
+            /*background-image: url(2.jpg);*/
+            transform: rotateX(180deg) translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+        }
+        
+        .c {
+            /*background-image: url(3.jpg);*/
+            transform: rotateY(-90deg) translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+        }
+        
+        .d {
+            /*background-image: url(4.jpg);*/
+            transform: rotateY(90deg) translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+        }
+        
+        .e {
+            /*background-image: url(5.jpg);*/
+            transform: rotateX(90deg) translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+        }
+        
+        .f {
+            /*background-image: url(6.jpg);*/
+            transform: rotateX(-90deg) translateZ(150px);
+            /*animation: move 15s infinite linear;*/
+        }
+        
+        span {
+            height: 30px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            /*align-items: center;*/
+            position: absolute;
+            left: calc(50% - 80px/2);
+            /*top: calc(50% - 80px/2);*/
+        }
+        
+        #g {
+            top: calc(50% - 80px/2 - 70px);
+            color: springgreen;
+        }
+        
+        #h {
+            top: calc(50% - 80px/2 - 40px);
+            color: yellow;
+        }
+        
+        #i {
+            top: calc(50% - 80px/2 - 10px);
+            color: chocolate;
+        }
+        
+        #j {
+            top: calc(50% - 80px/2 + 20px);
+            color: chartreuse
+        }
+        
+        #k {
+            top: calc(50% - 80px/2 + 50px);
+            color: crimson;
+        }
+        
+        #l {
+            top: calc(50% - 80px/2 + 80px);
+            color: fuchsia
+        }
+        
+        @keyframes up {
+            from {
+                transform: scaleX(0.1) scaleY(0.1) scaleZ(0.1)；
+            }
+            to {
+                transform: scaleX(2) scaleY(2) scaleZ(2);
+            }
+        }
+        
+        @keyframes down {
+            from {
+                transform: scaleX(2) scaleY(2) scaleZ(2)；
+            }
+            to {
+                transform: scaleX(0.1) scaleY(0.1) scaleZ(0.1);
+            }
+        }
+        
+        /*@keyframes move {
+            from {
+                transform: translateZ(150px)；
+            }
+            to {
+                transform: translateZ(0);
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="a"><span id="g">人生就像</span></div>
+        <div class="b"><span id="h">打电话</span></div>
+        <div class="c"><span id="i">不是</span></div>
+        <div class="d"><span id="j">你先挂</span></div>
+        <div class="e"><span id="k">就是</span></div>
+        <div class="f"><span id="l">我先挂</span></div>
+    </main>
+    <script src="美图.js"></script>
+</body>
+
+</html>
